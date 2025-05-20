@@ -1,6 +1,16 @@
+const express = require("express");
+const cors = require("cors");
+const app = express();
 require("dotenv").config();
-const server = require("http").createServer();
+const server = require("http").createServer(app);
 const socket = require("socket.io");
+
+app.use(express.json())
+app.use(cors({ origin: true, methods: "GET,HEAD,POST,PUT,PATCH,DELETE", credentials: true }));
+
+app.use("/", () => {
+    console.log("checked");
+});
 
 const port = process.env.PORT || 3030;
 
