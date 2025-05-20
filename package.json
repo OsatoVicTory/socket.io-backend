@@ -1,0 +1,16 @@
+{
+  "name": "socket.io-backend",
+  "version": "1.0.0",
+  "description": "socket.io backend for real time apps integration",
+  "license": "ISC",
+  "author": "Osato",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "socket.io": "^4.8.1"
+  }
+}
