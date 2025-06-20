@@ -22,6 +22,12 @@ const io = socket(server, {
 });
 
 io.on("connection", (socket) => {
+    // for survey app, data is { _id: string, answers: number[] }
+    socket.on("response", (data) => {
+        socket.emit("response", data);
+    });
+
+    // for chit-chat app
     socket.on("userOnline", (data) => {
         io.emit("userOnline", data);
     });
